@@ -5,9 +5,11 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { useColorScheme } from '@/hooks/useColorScheme'
+import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 
 export default function RootLayout() {
+  useFrameworkReady();
   const colorScheme = useColorScheme();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loaded] = useFonts({
