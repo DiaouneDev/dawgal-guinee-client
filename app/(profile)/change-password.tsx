@@ -10,14 +10,7 @@ import {
   Alert,
 } from 'react-native';
 import { router } from 'expo-router';
-import { 
-  ArrowLeft, 
-  Lock, 
-  Eye, 
-  EyeOff,
-  Shield,
-  CheckCircle
-} from 'lucide-react-native';
+import { ArrowLeft, Lock, Eye, EyeOff, Shield, CircleCheck as CheckCircle } from 'lucide-react-native';
 
 export default function ChangePasswordScreen() {
   const [formData, setFormData] = useState({
