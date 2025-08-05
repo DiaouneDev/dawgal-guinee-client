@@ -9,16 +9,7 @@ import {
   TextInput,
   Alert,
 } from 'react-native';
-import { 
-  CreditCard, 
-  Smartphone, 
-  Plus,
-  Trash2,
-  Star,
-  Shield,
-  CheckCircle,
-  Edit3
-} from 'lucide-react-native';
+import { CreditCard, Smartphone, Plus, Trash2, Star, Shield, CircleCheck as CheckCircle, CreditCard as Edit3 } from 'lucide-react-native';
 
 export default function PaymentScreen() {
   const [selectedMethod, setSelectedMethod] = useState('orange');
