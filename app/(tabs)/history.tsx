@@ -8,17 +8,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import { 
-  MapPin, 
-  Clock, 
-  Star, 
-  Filter,
-  Search,
-  Calendar,
-  CheckCircle,
-  XCircle,
-  AlertCircle
-} from 'lucide-react-native';
+import { MapPin, Clock, Star, ListFilter as Filter, Search, Calendar, CircleCheck as CheckCircle, Circle as XCircle, CircleAlert as AlertCircle } from 'lucide-react-native';
 
 export default function HistoryScreen() {
   const [searchQuery, setSearchQuery] = useState('');

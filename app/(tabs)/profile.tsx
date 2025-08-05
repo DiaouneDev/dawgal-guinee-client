@@ -9,24 +9,7 @@ import {
   Image,
 } from 'react-native';
 import { router } from 'expo-router';
-import { 
-  User, 
-  Edit3, 
-  Lock, 
-  Globe, 
-  Palette, 
-  Bell, 
-  Shield, 
-  HelpCircle, 
-  LogOut,
-  ChevronRight,
-  Star,
-  MapPin,
-  Clock,
-  Phone,
-  Mail,
-  Calendar
-} from 'lucide-react-native';
+import { User, CreditCard as Edit3, Lock, Globe, Palette, Bell, Shield, Circle as HelpCircle, LogOut, ChevronRight, Star, MapPin, Clock, Phone, Mail, Calendar } from 'lucide-react-native';
 
 export default function ProfileScreen() {
   const userInfo = {

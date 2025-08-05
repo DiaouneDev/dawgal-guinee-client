@@ -9,15 +9,7 @@ import {
   Image,
 } from 'react-native';
 import { router } from 'expo-router';
-import { 
-  ArrowLeft, 
-  User, 
-  Phone, 
-  Mail, 
-  Calendar, 
-  MapPin,
-  Edit3
-} from 'lucide-react-native';
+import { ArrowLeft, User, Phone, Mail, Calendar, MapPin, CreditCard as Edit3 } from 'lucide-react-native';
 
 export default function PersonalInfoScreen() {
   const userInfo = {
