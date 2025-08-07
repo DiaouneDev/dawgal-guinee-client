@@ -1,16 +1,16 @@
+import { router } from 'expo-router';
+import { ArrowLeft, CircleCheck as CheckCircle, Eye, EyeOff, Lock, Shield } from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Alert,
   SafeAreaView,
   ScrollView,
-  TouchableOpacity,
+  StyleSheet,
+  Text,
   TextInput,
-  Alert,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
-import { ArrowLeft, Lock, Eye, EyeOff, Shield, CircleCheck as CheckCircle } from 'lucide-react-native';
 
 export default function ChangePasswordScreen() {
   const [formData, setFormData] = useState({
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingVertical: 40,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

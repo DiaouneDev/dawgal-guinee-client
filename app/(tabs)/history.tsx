@@ -1,14 +1,14 @@
+import { CircleAlert as AlertCircle, Calendar, CircleCheck as CheckCircle, Clock, MapPin, Search, Star, Circle as XCircle } from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
   SafeAreaView,
   ScrollView,
-  TouchableOpacity,
+  StyleSheet,
+  Text,
   TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { MapPin, Clock, Star, ListFilter as Filter, Search, Calendar, CircleCheck as CheckCircle, Circle as XCircle, CircleAlert as AlertCircle } from 'lucide-react-native';
 
 export default function HistoryScreen() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -181,30 +181,42 @@ export default function HistoryScreen() {
       </View>
 
       {/* Filters */}
-      <ScrollView 
-        horizontal 
-        showsHorizontalScrollIndicator={false}
-        style={styles.filtersContainer}
-        contentContainerStyle={styles.filtersContent}
-      >
-        {filters.map((filter) => (
-          <TouchableOpacity
-            key={filter.id}
-            style={[
-              styles.filterChip,
-              selectedFilter === filter.id && styles.filterChipActive
-            ]}
-            onPress={() => setSelectedFilter(filter.id)}
-          >
-            <Text style={[
-              styles.filterText,
-              selectedFilter === filter.id && styles.filterTextActive
-            ]}>
-              {filter.label} ({filter.count})
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+      <View style={styles.filtersContainer}>
+        <ScrollView 
+          horizontal 
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.filtersContent}
+        >
+          {filters.map((filter) => (
+            <TouchableOpacity
+              key={filter.id}
+              style={[
+                styles.filterChip,
+                selectedFilter === filter.id && styles.filterChipActive
+              ]}
+              onPress={() => setSelectedFilter(filter.id)}
+            >
+              <Text style={[
+                styles.filterLabel,
+                selectedFilter === filter.id && styles.filterLabelActive
+              ]}>
+                {filter.label}
+              </Text>
+              <View style={[
+                styles.filterBadge,
+                selectedFilter === filter.id && styles.filterBadgeActive
+              ]}>
+                <Text style={[
+                  styles.filterCount,
+                  selectedFilter === filter.id && styles.filterCountActive
+                ]}>
+                  {filter.count}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      </View>
 
       {/* Trips List */}
       <ScrollView style={styles.tripsList} showsVerticalScrollIndicator={false}>
@@ -299,7 +311,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingVertical: 40,
     borderBottomWidth: 1,
     borderBottomColor: '#e9ecef',
   },
@@ -338,30 +350,55 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderBottomWidth: 1,
     borderBottomColor: '#e9ecef',
+    paddingVertical: 16,
   },
   filtersContent: {
     paddingHorizontal: 20,
-    paddingVertical: 16,
-    gap: 12,
+    gap: 10,
   },
   filterChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#f8f9fa',
-    borderRadius: 20,
-    paddingHorizontal: 16,
+    borderRadius: 25,
     paddingVertical: 8,
+    paddingLeft: 14,
+    paddingRight: 6,
     borderWidth: 1,
     borderColor: '#e9ecef',
+    minHeight: 38,
   },
   filterChipActive: {
     backgroundColor: '#0066CC',
     borderColor: '#0066CC',
   },
-  filterText: {
-    fontSize: 14,
+  filterLabel: {
+    fontSize: 13,
     color: '#666',
     fontWeight: '500',
+    marginRight: 6,
   },
-  filterTextActive: {
+  filterLabelActive: {
+    color: '#fff',
+  },
+  filterBadge: {
+    backgroundColor: '#e9ecef',
+    borderRadius: 12,
+    minWidth: 22,
+    height: 22,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 6,
+  },
+  filterBadgeActive: {
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  filterCount: {
+    fontSize: 11,
+    fontWeight: 'bold',
+    color: '#666',
+  },
+  filterCountActive: {
     color: '#fff',
   },
   tripsList: {

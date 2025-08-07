@@ -1,26 +1,24 @@
+import {
+  Calendar,
+  Car,
+  GraduationCap,
+  MapPin,
+  Minus,
+  Navigation,
+  Plus,
+  Users
+} from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Alert,
   SafeAreaView,
   ScrollView,
-  TouchableOpacity,
+  StyleSheet,
+  Text,
   TextInput,
-  Alert,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { 
-  MapPin, 
-  Navigation, 
-  Car, 
-  Users, 
-  GraduationCap,
-  Clock,
-  Plus,
-  Minus,
-  Calendar,
-  Settings
-} from 'lucide-react-native';
 
 export default function BookingScreen() {
   const [tripType, setTripType] = useState<'solo' | 'shared' | 'school'>('solo');
@@ -352,7 +350,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingVertical: 40,
     borderBottomWidth: 1,
     borderBottomColor: '#e9ecef',
   },

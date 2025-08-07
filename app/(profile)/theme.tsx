@@ -1,23 +1,23 @@
+import { router } from 'expo-router';
+import {
+  ArrowLeft,
+  Check,
+  Moon,
+  Palette,
+  Save,
+  Smartphone,
+  Sun
+} from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Alert,
   SafeAreaView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
-  Alert,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
-import { 
-  ArrowLeft, 
-  Palette, 
-  Check,
-  Sun,
-  Moon,
-  Smartphone,
-  Save
-} from 'lucide-react-native';
 
 export default function ThemeScreen() {
   const [selectedTheme, setSelectedTheme] = useState('light');
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingVertical: 40,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

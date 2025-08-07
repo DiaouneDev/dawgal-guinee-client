@@ -1,24 +1,23 @@
+import { router } from 'expo-router';
+import {
+  Bell,
+  Car,
+  Clock,
+  Gift,
+  GraduationCap,
+  MapPin,
+  Star,
+  Users
+} from 'lucide-react-native';
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
   SafeAreaView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
-  Image,
+  View
 } from 'react-native';
-import { router } from 'expo-router';
-import { 
-  MapPin, 
-  Clock, 
-  Star, 
-  Car, 
-  Users, 
-  GraduationCap,
-  Bell,
-  Gift
-} from 'lucide-react-native';
 
 export default function HomeScreen() {
   const quickActions = [
@@ -200,7 +199,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingVertical: 40,
     borderBottomWidth: 1,
     borderBottomColor: '#e9ecef',
   },

@@ -1,25 +1,25 @@
+import { router } from 'expo-router';
+import {
+  ArrowLeft,
+  Calendar,
+  Camera,
+  Mail,
+  Phone,
+  Save,
+  User
+} from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Alert,
+  Image,
   SafeAreaView,
   ScrollView,
-  TouchableOpacity,
+  StyleSheet,
+  Text,
   TextInput,
-  Image,
-  Alert,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
-import { 
-  ArrowLeft, 
-  Camera, 
-  Save,
-  User,
-  Phone,
-  Mail,
-  Calendar
-} from 'lucide-react-native';
 
 export default function EditInfoScreen() {
   const [formData, setFormData] = useState({
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingVertical: 40,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

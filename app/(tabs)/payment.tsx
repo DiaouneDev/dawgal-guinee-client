@@ -1,15 +1,14 @@
+import { CircleCheck as CheckCircle, CreditCard, CreditCard as Edit3, Plus, Shield, Smartphone, Star, Trash2 } from 'lucide-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Alert,
   SafeAreaView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
-  TextInput,
-  Alert,
+  View
 } from 'react-native';
-import { CreditCard, Smartphone, Plus, Trash2, Star, Shield, CircleCheck as CheckCircle, CreditCard as Edit3 } from 'lucide-react-native';
 
 export default function PaymentScreen() {
   const [selectedMethod, setSelectedMethod] = useState('orange');
@@ -299,7 +298,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingVertical: 40,
     borderBottomWidth: 1,
     borderBottomColor: '#e9ecef',
   },

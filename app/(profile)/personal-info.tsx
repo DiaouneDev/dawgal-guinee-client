@@ -1,15 +1,15 @@
+import { router } from 'expo-router';
+import { ArrowLeft, Calendar, CreditCard as Edit3, Mail, MapPin, Phone, User } from 'lucide-react-native';
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Image,
   SafeAreaView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
-  Image,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
-import { ArrowLeft, User, Phone, Mail, Calendar, MapPin, CreditCard as Edit3 } from 'lucide-react-native';
 
 export default function PersonalInfoScreen() {
   const userInfo = {
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingVertical: 40,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

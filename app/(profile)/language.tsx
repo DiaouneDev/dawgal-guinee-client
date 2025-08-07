@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  ScrollView,
-  TouchableOpacity,
-  Alert,
-} from 'react-native';
 import { router } from 'expo-router';
-import { 
-  ArrowLeft, 
-  Globe, 
+import {
+  ArrowLeft,
   Check,
+  Globe,
   Save
 } from 'lucide-react-native';
+import React, { useState } from 'react';
+import {
+  Alert,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 export default function LanguageScreen() {
   const [selectedLanguage, setSelectedLanguage] = useState('fr');
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingVertical: 40,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

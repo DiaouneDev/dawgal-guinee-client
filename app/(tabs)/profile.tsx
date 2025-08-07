@@ -1,15 +1,15 @@
+import { router } from 'expo-router';
+import { Bell, Calendar, ChevronRight, Clock, CreditCard as Edit3, Globe, Circle as HelpCircle, Lock, LogOut, Mail, MapPin, Palette, Phone, Shield, Star, User } from 'lucide-react-native';
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Image,
   SafeAreaView,
   ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
-  Image,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
-import { User, CreditCard as Edit3, Lock, Globe, Palette, Bell, Shield, Circle as HelpCircle, LogOut, ChevronRight, Star, MapPin, Clock, Phone, Mail, Calendar } from 'lucide-react-native';
 
 export default function ProfileScreen() {
   const userInfo = {
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingVertical: 40,
     borderBottomWidth: 1,
     borderBottomColor: '#e9ecef',
   },
